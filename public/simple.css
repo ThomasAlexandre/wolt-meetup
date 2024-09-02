@@ -1,0 +1,71 @@
+table {
+	border-collapse: collapse;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+table td {
+	padding: 15px;
+}
+table thead td {
+	background-color: #54585d;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #54585d;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid #dddfe1;
+}
+table tbody tr {
+	background-color: #f9fafb;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+/* Base styles for the input group */
+.input-group {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.input-group input {
+	flex: 1;
+	padding: 10px 15px;
+	font-size: 16px;
+	border: 2px solid #00acee; /* Wolt blue color */
+	border-radius: 25px 0 0 25px;
+	outline: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+	border-color: #0098c3; /* Slightly darker blue for focus */
+	box-shadow: 0 0 8px rgba(0, 172, 238, 0.5);
+}
+
+.input-group button {
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #00acee; /* Wolt blue */
+	border: 2px solid #00acee;
+	border-radius: 0 25px 25px 0;
+	cursor: pointer;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group button:hover {
+	background-color: #0098c3; /* Darker blue on hover */
+	box-shadow: 0 0 8px rgba(0, 172, 238, 0.5);
+}
+
+.input-group button:active {
+	background-color: #007b9a; /* Even darker blue on click */
+}
+
+.input-group button:focus {
+	outline: none;
+}
