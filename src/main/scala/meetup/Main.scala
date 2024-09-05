@@ -10,21 +10,14 @@ import derivation.Mode
 
 object Main:
 
-  def main(args: Array[String]): Unit = {
-    println("Hello Stockholm!")
-
-    val nameVar = Var(initial = "world")
-
-    val password: Password = Password("mysecret")
-    val offline: String = "2024-09-20"
-
-    val courier: Courier = Courier(
+  def main(args: Array[String]): Unit =
+    val nameVar = Var(initial = "")
+    val courier = Courier(
       name = "Jim",
-      password = password,
-      VehicleType.Bicycle,
+      password = Password("mysecret"),
+      vehicleType = VehicleType.Bicycle,
     )
     lazy val fleetCourier = Var(courier)
-
     val app = {
       div(
         div(
@@ -35,8 +28,7 @@ object Main:
         ),
       )
     }
-
     render(dom.document.getElementById("app"), app)
-  }
+
 
 
