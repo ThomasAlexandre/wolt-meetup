@@ -9,7 +9,6 @@ import domain.{Password, VehicleType}
 import derivation.Mode
 
 object Main:
-
   def main(args: Array[String]): Unit =
     val nameVar = Var(initial = "")
     val courier = Courier(
@@ -18,7 +17,7 @@ object Main:
       vehicleType = VehicleType.Bicycle,
     )
     lazy val fleetCourier = Var(courier)
-    val app = {
+    val app =
       div(
         div(
           h2("Fleet Courier Form"),
@@ -27,7 +26,6 @@ object Main:
           child.text <-- fleetCourier.signal.map(_.toString),
         ),
       )
-    }
     render(dom.document.getElementById("app"), app)
 
 
