@@ -2,6 +2,7 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 
 lazy val `wolt-meetup` = project.in(file("."))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
+  .enablePlugins(ScalablyTypedConverterExternalNpmPlugin)
   .settings(
     scalaVersion := "3.5.0",
 
@@ -22,6 +23,10 @@ lazy val `wolt-meetup` = project.in(file("."))
 
     libraryDependencies ++= Seq(
       "org.scala-js" %%% "scalajs-dom" % "2.8.0",
-      "com.raquo" %%% "laminar" % "0.14.2" // "16.0.0"
+      "com.raquo" %%% "laminar" % "0.14.2",
+      "org.typelevel" %%% "squants" % "1.8.3"
     ),
+
+    // Tell ScalablyTyped that we manage `npm install` ourselves
+    externalNpm := baseDirectory.value,
   )
