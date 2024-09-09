@@ -22,5 +22,6 @@ lazy val `wolt-meetup` = project.in(file("."))
 
     libraryDependencies ++= Seq(
       "org.scala-js" %%% "scalajs-dom" % "2.8.0",
+      "io.indigoengine" %%% "tyrian-io" % "0.11.0",
     ),
   )
